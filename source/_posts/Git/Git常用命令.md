@@ -2,6 +2,7 @@
 title: Git常用命令
 date: 2018-10-19 17:28:38
 tags:
+    - git
 ---
 - git init
     - 在本地当前目录初始化一个git仓库
