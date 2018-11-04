@@ -47,3 +47,27 @@ head用于显示文件的开头的内容。在默认情况下，head命令显示
 ## uniq
 只过滤相邻的重复行。
 - -c, --count		在每行前加上表示相应行目出现次数的前缀编号
+
+## find
+- find base_path 列出当前目录和子目录下的所有文件和文件夹
+- find path -name '*txt' 根据文件名或者正则表达式匹配搜索
+- find path -iname '*txt' 同上，忽略大小写
+- find path ! -name '*txt' 对上面的搜索结果取反
+- find path -type d 根据文件类型搜索，d文件夹，f普通文件，etc
+- find path -type f -size +2k 根据文件大小搜索，+2k大于2k的文件，-2k小于2k的文件，2k等你2k的文件
+- find path -type f -name '*txt' -delete 删除匹配到的文件
+- find path -mtime -2 查找文件更新日时在距现在时刻二天以内的文件
+- find path -mtime +2 查找文件更新日时在距现在时刻二天以上的文件
+- find path -mtime 2 查找文件更新日时在距现在时刻一天以上二天以内的文件
+- find path -mmin -2 查找文件更新日时在距现在时刻二分以内的文件
+- find path -mmin +2 查找文件更新日时在距现在时刻二分以上的文件
+- find path -mmin 2 查找文件更新日时在距现在时刻一分以上二分以内的文件
+- find path -perm 664 查找权限为664的文件或目录(需完全符合)
+- find path -empty 查找空文件或空目录
+- find path -empty -type f -print -delete查找空文件并删除
+- find path -size -10c 查找文件size小于10个字节的文件或目录
+- find path -size 10c 查找文件size等于10个字节的文件或目录
+- find path -size +10c 查找文件size大于10个字节的文件或目录
+- find path -size -10k 查找文件size小于10k的文件或目录
+- find path -size -10M 查找文件size小于10M的文件或目录
+- find path -size -10G 查找文件size小于10G的文件或目录

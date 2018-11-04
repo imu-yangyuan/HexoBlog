@@ -3,7 +3,7 @@ title: Linux文本处理常用命令
 date: 2018-10-30 15:10:41
 tags: linux
 ---
-Linux文本处理常用命令：**grep、sed、printf、awk**
+Linux文本处理常用命令：**grep、sed、printf、awk、cut、sort**
 
 ## 1. grep
 按行查找字符，输出包含字符的行
@@ -55,8 +55,13 @@ sed '2,5c abc'　　//将第2到5行替换为一行字符串"abc"
 sed 's/要被替换的字符串/新的字符串/g' /可以是#号之类的，在被替换的字符串包含/时，可以考虑别的分隔符。要被替换的字符串可以是
 正则表达式
 
+
 注意：
 ```
+操作特定区间或规则的行
+sed '8,$s/aa/AA/g' test.txt 对第8行到文件末尾的所有行进行搜索替换操作
+sed '/^[0-9]/s/aa/AA/g' test.txt 正则表达式表示对所有以数字开头的行，执行s操作
+
 sed的正则中  \(\)  和 \{m,n\} 需要转义
 . 表示任意字符
 * 表示零个或者多个
@@ -92,6 +97,7 @@ cat test.txt |awk 'NR==1 {printf "%10s %10s %10s %10s %10s \n",$1,$2,$3,$4,"Tota
 1）cut切割字符
 - 以“，”切割文件并取出第1列
 cat  test.txt |cut -d ',' -f 1| sort | uniq -c | sort -rn -k1 > new_test.txt
+
 
 2）sort排序的时候注意默认是按照字典的方式排序，如果按照数字时则必须加上-n
 - uniq去除重复，只能去除相邻的重复，所以要先排序，后去除重复
