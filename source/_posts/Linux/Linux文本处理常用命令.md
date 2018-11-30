@@ -1,6 +1,6 @@
 ---
 title: Linux文本处理常用命令
-date: 2018-10-30 15:10:41
+date: 2018-10-30 21:00:00
 tags: linux
 ---
 Linux文本处理常用命令：**grep、sed、printf、awk、cut、sort**

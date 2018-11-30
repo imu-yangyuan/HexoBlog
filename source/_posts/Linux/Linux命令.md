@@ -1,6 +1,6 @@
 ---
 title: Linux命令
-date: 2018-10-30 14:58:48
+date: 2018-10-30 20:00:00
 tags: linux
 ---
 ## sort

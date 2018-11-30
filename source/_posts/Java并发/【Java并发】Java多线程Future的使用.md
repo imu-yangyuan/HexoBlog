@@ -1,6 +1,6 @@
 ---
 title: 【Java并发】Java多线程Future的使用
-date: 2018-10-17 17:07:10
+date: 2018-10-17 21:00:00
 tags: java并发
 ---
 ## Future模式简述
